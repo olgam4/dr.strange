@@ -1,4 +1,5 @@
 import { createSignal } from 'solid-js'
+import Ding from '../../assets/ding.wav'
 
 const TWENTY_MINUTES_IN_SECONDS = 25 * 60
 
@@ -13,6 +14,10 @@ export default () => {
     setStared(true)
     setInterval(() => {
       setTimer(t => t - 1)
+      if (timer() === 0) {
+        const audio = new Audio(Ding)
+        audio.play()
+      }
     }, 1000)
   }
 

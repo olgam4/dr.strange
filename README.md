@@ -32,6 +32,7 @@ yarn tauri build
 │  └─ assets/       images for readme
 ├─ src-tauri/       application source code for backend
 └─ src/             web application source code
+   ├─ assets/       assets used by the application
    └─ components/   solid js components
 ```
 
