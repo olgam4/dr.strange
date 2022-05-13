@@ -1,13 +1,12 @@
-import type { Component } from 'solid-js';
-import Comp from './Comp';
+import type { Component } from 'solid-js'
+import Timer from './components/Timer'
 
 const App: Component = () => {
   return (
     <>
-      <h1>Hello world!!!!</h1>
-      <Comp />
+      <Timer />
     </>
-  );
-};
+  )
+}
 
-export default App;
+export default App

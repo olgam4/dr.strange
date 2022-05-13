@@ -3,7 +3,15 @@
   "version": "0.0.0",
   "license": "WTFPL",
   "description": "🦀 Small Tauri SolidJS App for Time Keeping feat. Vite",
-  "keywords": ["vite", "tauri", "rust", "typescript", "solidjs", "timekeep", "desktop-app"],
+  "keywords": [
+    "vite",
+    "tauri",
+    "rust",
+    "typescript",
+    "solidjs",
+    "timekeep",
+    "desktop-app"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "vite build",
