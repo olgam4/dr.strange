@@ -3,9 +3,9 @@ import Timer from './components/Timer'
 
 const App: Component = () => {
   return (
-    <>
-      <Timer />
-    </>
+    <div>
+      <Timer minutes={25} />
+    </div>
   )
 }
 

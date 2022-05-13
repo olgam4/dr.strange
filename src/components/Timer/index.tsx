@@ -1,12 +1,14 @@
 import { createSignal } from 'solid-js'
 import Ding from '../../assets/ding.wav'
 
-const TWENTY_MINUTES_IN_SECONDS = 25 * 60
+function fmtMSS(s: number ){return(s-(s%=60))/60+(9<s?':':':0')+s}
 
-function fmtMSS(s){return(s-(s%=60))/60+(9<s?':':':0')+s}
+interface Props {
+  minutes: number
+}
 
-export default () => {
-  const [timer, setTimer] = createSignal(TWENTY_MINUTES_IN_SECONDS)
+export default ({ minutes }: Props) => {
+  const [timer, setTimer] = createSignal(minutes * 60)
   const [started, setStared] = createSignal(false)
 
   const startTimer = () => {
@@ -22,11 +24,11 @@ export default () => {
   }
 
   return (
-    <div>
+    <div class="flex flex-col justify-center items-center rounded-md px-2 py-4 mx-60 bg-neutral-400">
       <div>{fmtMSS(timer())}</div>
       <button
         onClick={startTimer}
-        class="border rounded-md px-2 py-1"
+        class="border rounded-md px-2 py-1 border-b-4"
       >
         Start
       </button>
