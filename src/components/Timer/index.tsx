@@ -32,12 +32,24 @@ export default ({ minutes }: Props) => {
   }
    const resetTimer = () => {
     setTimer(minutes * 60)
+    clearInterval(timerInterval())
     stopTimer()
+  }
+
+  const progressBar = () => {
+    const progress = timer() / (minutes * 60)
+    return (
+      <div class="relative h-[10px] w-[100px]">
+        <div class="h-[10px] bg-gray-100 w-full absolute" />
+        <div class="h-[10px] bg-blue-400 absolute" style={{ width: `${(1 - progress) * 100}%` }} />
+      </div>
+    )
   }
 
   return (
     <div class="flex flex-col justify-center items-center rounded-md px-2 py-4 mx-60 bg-neutral-400">
       <div>{fmtMSS(timer())}</div>
+      {progressBar()}
       <div class="flex justify-center">
         <button
           onClick={startTimer}
