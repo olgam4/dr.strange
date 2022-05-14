@@ -12,7 +12,7 @@ const ProgressBar = ({ progress }: ProgressBarProps) => {
   })
 
   return (
-    <div class={`relative h-[10px] w-[${totalWidth}px]`}>
+    <div class={`relative h-[10px] w-[200px]`}>
       <div class="h-[10px] bg-gray-300 w-full absolute" />
       <div
         class={`h-[10px] bg-gray-100 absolute`}
