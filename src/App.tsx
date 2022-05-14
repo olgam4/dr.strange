@@ -3,7 +3,7 @@ import Timer from './components/Timer'
 
 const App: Component = () => {
   return (
-    <div>
+    <div class="flex justify-center">
       <Timer minutes={25} />
     </div>
   )
