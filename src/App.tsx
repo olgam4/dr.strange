@@ -1,4 +1,4 @@
-import { Component, createSignal, Match, Switch } from 'solid-js'
+import { Component, createMemo, createSignal, Match, Switch } from 'solid-js'
 
 import Timer from './components/Timer'
 import { createTimer } from './components/Timer/reactivity'
@@ -16,9 +16,20 @@ const App: Component = () => {
   const shortBreakTimer = createTimer(5)
   const longBreakTimer = createTimer(15)
 
+  const backgroundColor = createMemo(() => {
+    switch (mode()) {
+      case State.POMODORO:
+        return 'bg-red-400'
+      case State.SHORT_BREAK:
+        return 'bg-green-400'
+      case State.LONG_BREAK:
+        return 'bg-blue-400'
+    }
+  })
+
   return (
-    <div class="flex justify-center">
-      <div>
+    <div class={`absolute flex justify-center items-center top-0 bottom-0 left-0 right-0 ${backgroundColor()}`}>
+      <div class="bg-white rounded-lg shadow-lg p-4">
         <button
           onClick={() => setMode(State.POMODORO) && pomodoroTimer.reset()}
           class={`${mode() === State.POMODORO && 'bg-gray-400 text-white'} p-2 rounded`}
