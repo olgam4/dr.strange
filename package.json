@@ -21,7 +21,7 @@
   "dependencies": {
     "@tauri-apps/api": "1.0.0-rc.5",
     "rxjs": "7.5.5",
-    "solid-js": "1.4.0"
+    "solid-js": "1.4.1"
   },
   "devDependencies": {
     "@babel/core": "7.17.10",
