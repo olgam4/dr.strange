@@ -1,20 +1,17 @@
-import { createTimer } from './reactivity'
+import type { createTimer } from './reactivity'
 import { TimerButton, ProgressBar } from './components'
 import { createMemo } from 'solid-js'
 
-type Props = {
-  minutes: number
-}
+type Props = ReturnType<typeof createTimer>
 
-export default ({ minutes }: Props) => {
-  const {
+export default ({
     fortmattedTime,
     isRunning,
     progress,
     reset,
     start,
     stop,
-  } = createTimer(minutes)
+  }: Props) => {
 
   const startDisabled = createMemo(() => {
     return isRunning()
@@ -25,7 +22,7 @@ export default ({ minutes }: Props) => {
   })
 
   return (
-    <div class="w-[300px] flex flex-col justify-center items-center rounded-md px-2 py-4 bg-neutral-400">
+    <div class="w-[300px] flex flex-col justify-center items-center">
       <div>{fortmattedTime()}</div>
       <ProgressBar progress={progress} />
       <div class="flex justify-center mt-3">
