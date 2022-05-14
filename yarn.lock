@@ -470,6 +470,11 @@
     "@tauri-apps/cli-win32-ia32-msvc" "1.0.0-rc.10"
     "@tauri-apps/cli-win32-x64-msvc" "1.0.0-rc.10"
 
+"@thisbeyond/solid-dnd@0.6.1":
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/@thisbeyond/solid-dnd/-/solid-dnd-0.6.1.tgz#f7a0b978bce40476ec250737eeb0e3cd4ac258ee"
+  integrity sha512-ePNEUxVefi5+7QDwRzwhBIk4CJqQZLrbcz3j/KMvlTRBQHBGDsbEE5iLjfMpYE/XgYOB5oGA6UX7AN2pnfQf1Q==
+
 acorn-node@^1.6.1:
   version "1.8.2"
   resolved "https://registry.yarnpkg.com/acorn-node/-/acorn-node-1.8.2.tgz#114c95d64539e53dede23de8b9d96df7c7ae2af8"

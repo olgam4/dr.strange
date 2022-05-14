@@ -19,14 +19,15 @@
     "tauri": "tauri"
   },
   "dependencies": {
-    "@tauri-apps/api": "1.0.0-rc.5",
-    "rxjs": "7.5.5",
-    "solid-js": "1.4.1"
+    "@tauri-apps/api": "1.0.0-rc.5"
   },
   "devDependencies": {
     "@babel/core": "7.17.10",
     "@tauri-apps/cli": "1.0.0-rc.10",
     "autoprefixer": "10.4.7",
+    "@thisbeyond/solid-dnd": "0.6.1",
+    "rxjs": "7.5.5",
+    "solid-js": "1.4.1",
     "babel-preset-solid": "1.4.0",
     "postcss": "8.4.13",
     "postcss-preset-env": "7.5.0",
