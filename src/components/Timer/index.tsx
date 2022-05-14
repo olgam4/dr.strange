@@ -23,7 +23,9 @@ export default ({
 
   return (
     <div class="w-[300px] flex flex-col justify-center items-center">
-      <div>{fortmattedTime()}</div>
+      <div class="text-4xl">
+        {fortmattedTime()}
+      </div>
       <ProgressBar progress={progress} />
       <div class="flex justify-center mt-3">
         <TimerButton disabled={startDisabled} onClick={start}>Start</TimerButton>
