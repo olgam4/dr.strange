@@ -37,7 +37,7 @@ const createPomodoro = () => {
         case State.POMODORO:
           return setShortBreak()
         case State.SHORT_BREAK:
-          return setLongBreak()
+          return setPomodoro()
         case State.LONG_BREAK:
           return setPomodoro()
       }
