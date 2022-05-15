@@ -33,7 +33,8 @@ yarn tauri build
 ├─ src-tauri/       application source code for backend
 └─ src/             web application source code
    ├─ assets/       assets used by the application
-   └─ components/   solid js components
+   ├─ components/   solid js components
+   └─ types/        type declarations to help tslint
 ```
 
 ## License
