@@ -1,5 +1,5 @@
-import { createSignal, observable } from 'solid-js'
-import { from, fromEvent, Subject } from 'rxjs'
+import { createSignal } from 'solid-js'
+import { Subject } from 'rxjs'
 
 import Ding from '../../assets/ding.wav'
 
@@ -27,20 +27,14 @@ export const createTimer = (minutes?: number) => {
     if (isRunning()) {
       setTime(time() - 1)
     }
-  }
-
-  // @ts-ignore
-  const obsv$ = from(observable(time))
-  const endSubject = new Subject()
-
-  obsv$.subscribe(() => {
     if (time() === 0){
       ding()
       reset()
       endSubject.next('end')
     }
-  })
+  }
 
+  const endSubject = new Subject()
 
   const ding = () => {
     const audio = new Audio(Ding)
