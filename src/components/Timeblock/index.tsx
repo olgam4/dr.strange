@@ -11,25 +11,38 @@ import {
 import { batch, createSignal, For } from "solid-js"
 import { createStore } from "solid-js/store"
 
-const Sortable = (props) => {
-  const sortable = createSortable(props.item)
+interface SortableProps {
+  item: any
+}
+
+const Sortable = ({ item }: SortableProps) => {
+  const sortable = createSortable(item)
   return (
     <div
       use:sortable
       class="sortable"
       classList={{ "opacity-25": sortable.isActiveDraggable }}
     >
-      {props.item}
+      {item}
     </div>
   )
 }
 
-const SortableOverlay = (props) => {
-  return <div class="sortable">{props.item}</div>
+interface SortableOverlayProps {
+  item: any
 }
 
-const Column = (props) => {
-  const sortable = createSortable(props.id)
+const SortableOverlay = ({ item }: SortableOverlayProps) => {
+  return <div class="sortable">{item}</div>
+}
+
+interface ColumnProps {
+  id: any
+  items: any
+}
+
+const Column = ({ id, items }: ColumnProps) => {
+  const sortable = createSortable(id)
   return (
     <div
       ref={sortable.ref}
@@ -37,23 +50,28 @@ const Column = (props) => {
       classList={{ "opacity-25": sortable.isActiveDraggable }}
     >
       <div class="column-header" {...sortable.dragActivators}>
-        {props.id}
+        {id}
       </div>
       <div class="column bg-gray-100">
-        <SortableProvider ids={props.items}>
-          <For each={props.items}>{(item) => <Sortable item={item} />}</For>
+        <SortableProvider ids={items}>
+          <For each={items}>{(item) => <Sortable item={item} />}</For>
         </SortableProvider>
       </div>
     </div>
   )
 }
 
-const ColumnOverlay = (props) => {
+interface ColumnOverlayProps {
+  id: any
+  items: any
+}
+
+const ColumnOverlay = ({ id, items }: ColumnOverlayProps) => {
   return (
     <div>
-      <div class="column-header">{props.id}</div>
+      <div class="column-header">{id}</div>
       <div class="column bg-gray-100">
-        <For each={props.items}>
+        <For each={items}>
           {(item) => <SortableOverlay item={item} />}
         </For>
       </div>
