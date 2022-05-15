@@ -1374,6 +1374,11 @@ semver@^6.3.0:
   resolved "https://registry.yarnpkg.com/semver/-/semver-6.3.0.tgz#ee0a64c8af5e8ceea67687b133761e1becbd1d3d"
   integrity sha512-b39TBaTSfV6yBrapU89p5fKekE2m/NwnDocOVruQFS1/veMgdzuPcnOM34M6CwxW8jH/lxEa5rBoDeUwu5HHTw==
 
+solid-icons@0.4.1:
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/solid-icons/-/solid-icons-0.4.1.tgz#d3fe7c98fdf4831857bf032c24b65e968ef7d71d"
+  integrity sha512-FwmJA/uaWNpNbanKiKDpDHGdWXP8Kvl2EqKxB50QlV15dHeL812ytPbBmDfQuOpaBnOy+WQ64UmFUudkQgi9Dw==
+
 solid-js@1.4.1:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/solid-js/-/solid-js-1.4.1.tgz#8714838a59e31695e7e6ecfe69494b1428d2dfb3"

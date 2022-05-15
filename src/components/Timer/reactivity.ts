@@ -1,4 +1,6 @@
-import { createSignal } from 'solid-js'
+import { createSignal, observable } from 'solid-js'
+import { from, fromEvent, Subject } from 'rxjs'
+
 import Ding from '../../assets/ding.wav'
 
 function fmtMSS(s: number): string { return (s - (s %= 60)) / 60 + (9 < s ? ':' : ':0') + s }
@@ -25,11 +27,20 @@ export const createTimer = (minutes?: number) => {
     if (isRunning()) {
       setTime(time() - 1)
     }
-    if (time() === 0) {
+  }
+
+  // @ts-ignore
+  const obsv$ = from(observable(time))
+  const endSubject = new Subject()
+
+  obsv$.subscribe(() => {
+    if (time() === 0){
       ding()
       reset()
+      endSubject.next('end')
     }
-  }
+  })
+
 
   const ding = () => {
     const audio = new Audio(Ding)
@@ -50,5 +61,6 @@ export const createTimer = (minutes?: number) => {
     start,
     stop,
     reset,
+    end$: endSubject.asObservable()
   }
 }

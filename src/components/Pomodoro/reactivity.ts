@@ -32,6 +32,16 @@ const createPomodoro = () => {
     isPomodoro: () => mode() === State.POMODORO,
     isShortBreak: () => mode() === State.SHORT_BREAK,
     isLongBreak: () => mode() === State.LONG_BREAK,
+    nextState: () => {
+      switch (mode()) {
+        case State.POMODORO:
+          return setShortBreak()
+        case State.SHORT_BREAK:
+          return setLongBreak()
+        case State.LONG_BREAK:
+          return setPomodoro()
+      }
+    }
   }
 }
 

@@ -29,11 +29,12 @@ interface TimerButtonProps {
 }
 
 const TimerButton = ({ onClick, children, disabled }: TimerButtonProps) => {
+  const isDisabled = createMemo(() => disabled && disabled())
   return (
     <button
-      class="border rounded-md px-2 py-1 mx-1 border-b-4 bg-red-200 disabled:bg-gray-300"
+      class={`border rounded-md px-2 py-1 border-b-4 bg-red-200 disabled:bg-gray-300 ${!isDisabled() && 'hover:border-b-red-300 hover:text-red-400'}`}
       onClick={onClick}
-      disabled={disabled && disabled()}
+      disabled={isDisabled()}
     >
       {children}
     </button>
