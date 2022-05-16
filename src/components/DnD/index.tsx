@@ -5,12 +5,13 @@ interface DnDProps {
   onConsider: (event: any) => void
   onFinalize: (event: any) => void
   children?: any
+  className: string
 }
 
-export default ({ children, items, onConsider, onFinalize }: DnDProps) => {
+export default ({ children, className, items, onConsider, onFinalize }: DnDProps) => {
   const dndzone = SDD.dndzone
   return (
-    <div use:dndzone={{ items }} on:consider={onConsider} on:finalize={onFinalize}>
+    <div use:dndzone={{ items }} on:consider={onConsider} on:finalize={onFinalize} class={className}>
       {children}
     </div>
   )
