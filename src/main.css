@@ -7,3 +7,31 @@
 * {
   font-family: 'Poppins', sans-serif;
 }
+
+@layer components {
+  .menu-button {
+    --inactive-radius: 100px;
+    --active-radius: 5px;
+
+    .icon {
+      transition-duration: 0.4s;
+      transition-delay: 0;
+      transition-timing-function: linear;
+    }
+
+    &.active {
+      .icon {
+        border-radius: var(--active-radius);
+      }
+    }
+
+    &.inactive {
+      .icon {
+        border-radius: var(--inactive-radius);
+        &:hover {
+          border-radius: var(--active-radius);
+        }
+      }
+    }
+  }
+}
