@@ -1369,6 +1369,11 @@ semver@^6.3.0:
   resolved "https://registry.yarnpkg.com/semver/-/semver-6.3.0.tgz#ee0a64c8af5e8ceea67687b133761e1becbd1d3d"
   integrity sha512-b39TBaTSfV6yBrapU89p5fKekE2m/NwnDocOVruQFS1/veMgdzuPcnOM34M6CwxW8jH/lxEa5rBoDeUwu5HHTw==
 
+solid-app-router@0.3.2:
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/solid-app-router/-/solid-app-router-0.3.2.tgz#87c687262d2cc6267fd5f5025a6c5b12ae564bc7"
+  integrity sha512-zh6Ui87xy23JUxrH0z1xAROJPpiuxa3JRx9jP2qqjr07q2EKQOjn9BrmTFvQd/azQWzLjSMU+hN2fy6kLh5Bdw==
+
 solid-dnd-directive@0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/solid-dnd-directive/-/solid-dnd-directive-0.2.0.tgz#f7e63a91e47f53e764b9b0fafe3513dca101d412"
