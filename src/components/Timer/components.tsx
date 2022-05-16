@@ -1,4 +1,4 @@
-import { createMemo, JSXElement } from 'solid-js'
+import { createMemo } from 'solid-js'
 
 interface ProgressBarProps {
   progress: () => number
@@ -22,23 +22,4 @@ const ProgressBar = ({ progress }: ProgressBarProps) => {
   )
 }
 
-interface TimerButtonProps {
-  onClick: () => void
-  disabled?: () => boolean
-  children: JSXElement
-}
-
-const TimerButton = ({ onClick, children, disabled }: TimerButtonProps) => {
-  const isDisabled = createMemo(() => disabled && disabled())
-  return (
-    <button
-      class={`border rounded-md px-2 py-1 border-b-4 bg-red-200 disabled:bg-gray-300 ${!isDisabled() && 'hover:border-b-red-300 hover:text-red-400'}`}
-      onClick={onClick}
-      disabled={isDisabled()}
-    >
-      {children}
-    </button>
-  )
-}
-
-export { ProgressBar, TimerButton }
+export { ProgressBar }

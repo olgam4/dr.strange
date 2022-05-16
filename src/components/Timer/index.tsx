@@ -1,7 +1,5 @@
-import { createMemo } from 'solid-js'
-
 import type { createTimer } from './reactivity'
-import { TimerButton, ProgressBar } from './components'
+import { ProgressBar } from './components'
 
 import { FaSolidPause, FaSolidPlay } from 'solid-icons/fa'
 import { FiRepeat } from 'solid-icons/fi'
@@ -17,14 +15,6 @@ export default ({
     stop,
   }: Props) => {
 
-  const startDisabled = createMemo(() => {
-    return isRunning()
-  })
-
-  const stopDisabled = createMemo(() => {
-    return !isRunning()
-  })
-
   return (
     <div class="w-[300px] flex flex-col justify-center items-center">
       <div class="text-6xl">
@@ -32,9 +22,9 @@ export default ({
       </div>
       <ProgressBar progress={progress} />
       <div class="flex justify-center mt-3 space-x-1">
-        <TimerButton disabled={startDisabled} onClick={start}><FaSolidPlay /></TimerButton>
-        <TimerButton disabled={stopDisabled} onClick={stop}><FaSolidPause /></TimerButton>
-        <TimerButton onClick={reset}><FiRepeat font-size='20'/></TimerButton>
+        <button disabled={isRunning()} onClick={start} class="timer-button"><FaSolidPlay /></button>
+        <button disabled={!isRunning()} onClick={stop} class="timer-button"><FaSolidPause /></button>
+        <button onClick={reset} class="timer-button"><FiRepeat font-size='20'/></button>
       </div>
     </div>
   )
