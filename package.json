@@ -19,13 +19,14 @@
     "tauri": "tauri"
   },
   "dependencies": {
-    "@tauri-apps/api": "1.0.0-rc.5",
-    "solid-icons": "0.4.1"
+    "@tauri-apps/api": "1.0.0-rc.5"
   },
   "devDependencies": {
     "@babel/core": "7.17.10",
     "@tauri-apps/cli": "1.0.0-rc.10",
-    "@thisbeyond/solid-dnd": "0.6.1",
+    "solid-dnd-directive": "0.2.0",
+    "solid-icons": "0.4.1",
+    "solid-zustand": "^1.4.0",
     "autoprefixer": "10.4.7",
     "babel-preset-solid": "1.4.0",
     "postcss": "8.4.13",
