@@ -1381,10 +1381,10 @@ solid-dnd-directive@0.2.0:
   dependencies:
     svelte-dnd-action "0.9.11"
 
-solid-icons@0.4.1:
-  version "0.4.1"
-  resolved "https://registry.yarnpkg.com/solid-icons/-/solid-icons-0.4.1.tgz#d3fe7c98fdf4831857bf032c24b65e968ef7d71d"
-  integrity sha512-FwmJA/uaWNpNbanKiKDpDHGdWXP8Kvl2EqKxB50QlV15dHeL812ytPbBmDfQuOpaBnOy+WQ64UmFUudkQgi9Dw==
+solid-icons@0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/solid-icons/-/solid-icons-0.5.0.tgz#7f6b59cc30603088195a8f6f66a9631bdd76c6e0"
+  integrity sha512-diDMdtV2loH0LDbAPHAQiQNcxw2lXtzlw1qBDYtmZKSY1vedOdBk/aVylmVhzTYP12SQYeJdcg25MY6CHnkn8w==
 
 solid-js@1.4.1:
   version "1.4.1"

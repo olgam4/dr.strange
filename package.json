@@ -31,7 +31,7 @@
     "rxjs": "7.5.5",
     "solid-app-router": "0.3.2",
     "solid-dnd-directive": "0.2.0",
-    "solid-icons": "0.4.1",
+    "solid-icons": "0.5.0",
     "solid-js": "1.4.1",
     "solid-zustand": "^1.4.0",
     "tailwindcss": "3.0.24",
