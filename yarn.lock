@@ -1386,10 +1386,10 @@ solid-icons@0.4.1:
   resolved "https://registry.yarnpkg.com/solid-icons/-/solid-icons-0.4.1.tgz#d3fe7c98fdf4831857bf032c24b65e968ef7d71d"
   integrity sha512-FwmJA/uaWNpNbanKiKDpDHGdWXP8Kvl2EqKxB50QlV15dHeL812ytPbBmDfQuOpaBnOy+WQ64UmFUudkQgi9Dw==
 
-solid-js@1.4.1:
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/solid-js/-/solid-js-1.4.1.tgz#8714838a59e31695e7e6ecfe69494b1428d2dfb3"
-  integrity sha512-ts480PccmUW9WAludSXET2dbBevjv+l6XMmN/OyG/a/xA8ZQoX4hNBN3gGhW785ZZv90fowbUSuSQUwOISm3YA==
+solid-js@1.4.7:
+  version "1.4.7"
+  resolved "https://registry.yarnpkg.com/solid-js/-/solid-js-1.4.7.tgz#c174199c9248bcdceb66fa1b216348eef4541dfe"
+  integrity sha512-u3hoe5w3xseAc/8zLwYaQVGanWXknMMQkzryNz7lOPy2ygW6DhCtfMseun4kLflRNRzrUUpTV3W5p7j2SGcHCQ==
 
 solid-js@^1.3.3:
   version "1.4.0"
