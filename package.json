@@ -22,7 +22,7 @@
     "@tauri-apps/api": "1.0.0-rc.5"
   },
   "devDependencies": {
-    "@babel/core": "7.17.10",
+    "@babel/core": "7.25.9",
     "@tauri-apps/cli": "1.0.0-rc.10",
     "autoprefixer": "10.4.7",
     "babel-preset-solid": "1.4.0",
